@@ -1,40 +1,86 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Quarterly Earnings Report</title>
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css">
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Title Slide -->
+      <section>
+        <h1>Quarterly Earnings Report</h1>
+        <p>Presented by: 23ds2000044@ds.study.iitm.ac.in</p>
+        <aside class="notes">
+          Welcome stakeholders! This presentation covers our latest financial results.
+        </aside>
+      </section>
 
-		<title>reveal.js</title>
+      <!-- Markdown Slide -->
+      <section data-markdown>
+        <textarea data-template>
+### Key Highlights
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+- Revenue up 15% YoY
+- Net profit margin improved
+- New product launches
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+---
+        </textarea>
+      </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+      <!-- Animated Fragments -->
+      <section>
+        <h2>Revenue Breakdown</h2>
+        <ul>
+          <li class="fragment">Product A: $1.2M</li>
+          <li class="fragment">Product B: $900K</li>
+          <li class="fragment">Services: $500K</li>
+        </ul>
+        <aside class="notes">
+          Use fragments to reveal each revenue stream one by one.
+        </aside>
+      </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+      <!-- Code Sample with Highlighting -->
+      <section>
+        <h2>Sample Financial Calculation</h2>
+        <pre><code class="language-js">
+// Calculate profit margin
+const profitMargin = (netIncome / revenue) * 100;
+console.log(`Profit Margin: ${profitMargin}%`);
+        </code></pre>
+        <aside class="notes">
+          This code calculates the profit margin as a percentage.
+        </aside>
+      </section>
+
+      <!-- Math Equation -->
+      <section>
+        <h2>Financial Formula</h2>
+        <p>
+          $$\text{Earnings Per Share (EPS)} = \frac{\text{Net Income} - \text{Dividends}}{\text{Outstanding Shares}}$$
+        </p>
+        <aside class="notes">
+          EPS is a key metric for stakeholders.
+        </aside>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/reveal.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script src="plugin/math/math.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ]
+    });
+  </script>
+</body>
 </html>
